@@ -1,0 +1,22 @@
+
+.submit-button{
+    width: 200px;
+    height: 50px;
+    background:$secondaryColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 0.06em;
+    color: $thirdColor;
+    margin-left:164px;
+    border-color: $thirdColor;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top:30px;
+}

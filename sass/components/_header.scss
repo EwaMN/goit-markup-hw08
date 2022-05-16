@@ -1,0 +1,145 @@
+.headerindex {
+  border-bottom: 1px solid $lineColor;
+}
+
+.headerindex_navigationlist {
+  display: flex;
+}
+
+.headerindex_navigationlistlink,
+.headerindex_mailto,
+.headerindex_mailto {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+}
+
+.headerindex_navigationlistlink {
+  color: $mainColor;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  &:hover,
+  &:focus {
+    color: $secondaryColor;
+  }
+}
+
+.headerindex_telephone,
+.headerindex_mailto {
+  color: $mainColor;
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+
+  &:hover,
+  &:focus {
+    color: $secondaryColor;
+  }
+}
+
+.active {
+  color: $secondaryColor;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 47px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $secondaryColor;
+  }
+}
+
+.headerindex_navigationlistitem {
+  position: relative;
+}
+
+.headerindex_contact {
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.headerindex_mailicon,
+.headerindex_phoneicon {
+  margin-right: 8px;
+  fill: currentColor;
+}
+
+.headerindex_telephone,
+.headerindex_mailto {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .headerindex {
+    .container {
+      position: relative;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+  .headerindex_navigationlistlink,
+  .headerindex_telephone,
+  .headerindex_mailto {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .headerindex  {
+    .container {
+      display: flex;
+      padding-top: 26px;
+      padding-bottom: 26px;
+      align-items: center;
+    }
+  }
+
+  .headerindex_navigationlistitem:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headerindex {
+    .container {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+  .headerindex_navigationlistitem:not(:last-child) {
+    margin-right: 46px;
+  }
+
+  .headerindex_navigationlistlink,
+  .headerindex_telephone,
+  .headerindex_mailto {
+    font-size: 14px;
+    line-height: 1.143;
+  }
+  .active {
+    &::after {
+      top: 45px;
+    }
+  }
+  .headerindex_contact {
+    display: flex;
+  }
+
+  .headerindex_mailicon,
+  .headerindex_phoneicon {
+    margin-right: 10px;
+  }
+  .headerindex_mailto  {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+}
+
+
